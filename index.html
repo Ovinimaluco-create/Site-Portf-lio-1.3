@@ -221,7 +221,7 @@
             line-height: 1.6;
         }
 
-        /* Seção do Audiomack */
+        /* Seção de Portfólio Musical */
         .music-section {
             margin: 50px 0 30px;
         }
@@ -263,7 +263,13 @@
             margin-bottom: 20px;
         }
 
-        .btn-audiomack {
+        .btn-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn-music {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -279,7 +285,7 @@
             transition: all 0.2s ease;
         }
 
-        .btn-audiomack:hover {
+        .btn-music:hover {
             background-color: var(--accent-hover);
             transform: translateY(-2px);
         }
@@ -426,14 +432,19 @@
             <section class="music-section">
                 <div class="section-header">
                     <h2>Portfólio Musical</h2>
-                    <span class="badge-secure">🎵 Audiomack Oficial</span>
+                    <span class="badge-secure">🎵 Canais Oficiais</span>
                 </div>
 
                 <div class="link-card">
-                    <p>Ouça meu trabalho no Audiomack:</p>
-                    <a href="https://audiomack.com/ovinimaluco" target="_blank" rel="noopener noreferrer" class="btn-audiomack">
-                        Ouvir no Audiomack ↗
-                    </a>
+                    <p>Ouça meu trabalho nas plataformas abaixo:</p>
+                    <div class="btn-container">
+                        <a href="https://audiomack.com/ovinimaluco" target="_blank" rel="noopener noreferrer" class="btn-music">
+                            Ouvir no Audiomack ↗
+                        </a>
+                        <a href="https://on.soundcloud.com/Qscum2rJpWQlpoEhK5" target="_blank" rel="noopener noreferrer" class="btn-music">
+                            Ouvir no SoundCloud ↗
+                        </a>
+                    </div>
                 </div>
             </section>
         </div>
@@ -476,4 +487,3 @@
 
 </body>
 </html>
-
