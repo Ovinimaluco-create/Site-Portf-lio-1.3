@@ -10,14 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0b131f;           /* Azul marinho bem escuro */
-            --card-bg: #141f30;            /* Azul marinho pastel escuro */
-            --card-border: #233348;        /* Borda suave */
-            --accent-color: #729bca;      /* Azul marinho pastel suave */
-            --accent-hover: #8daed8;      /* Tom suave para hover */
-            --badge-bg: rgba(114, 155, 202, 0.12);
-            --text-primary: #f0f4f8;       /* Branco azulado */
-            --text-secondary: #94a3b8;     /* Cinza/azul fosco */
+            --bg-color: #f4f6f8;           /* Azul marinho bem escuro */
+            --card-bg: #ffffff;            /* Azul marinho pastel escuro */
+            --card-border: #d9e0e7;        /* Borda suave */
+            --accent-color: #5f7fa3;      /* Azul marinho pastel suave */
+            --accent-hover: #7696b8;      /* Tom suave para hover */
+            --badge-bg: rgba(95, 127, 163, 0.10);
+            --text-primary: #26313d;       /* Branco azulado */
+            --text-secondary: #667384;     /* Cinza/azul fosco */
             --max-width: 950px;
         }
 
@@ -74,7 +74,7 @@
 
         .tab-btn.active {
             background-color: var(--accent-color);
-            color: #0b131f;
+            color: #ffffff;
             border-color: var(--accent-color);
         }
 
@@ -98,7 +98,7 @@
             width: 100px;
             height: 100px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--accent-color), #3b5998);
+            background: linear-gradient(135deg, var(--accent-color), #8ea8c2);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -113,7 +113,7 @@
             font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 800;
             letter-spacing: -0.5px;
-            color: #ffffff;
+            color: var(--text-primary);
             margin-bottom: 8px;
         }
 
@@ -211,7 +211,7 @@
 
         .skill-content h3 {
             font-size: 1.2rem;
-            color: #ffffff;
+            color: var(--text-primary);
             margin-bottom: 8px;
         }
 
@@ -353,6 +353,7 @@
         <nav class="nav-tabs">
             <button class="tab-btn active" onclick="switchTab('inicio')">Início</button>
             <button class="tab-btn" onclick="switchTab('projetos')">Projetos que participei</button>
+            <button class="tab-btn" onclick="switchTab('plataformas')">Minhas plataformas</button>
         </nav>
 
         <header>
@@ -429,24 +430,7 @@
                 </div>
             </section>
 
-            <section class="music-section">
-                <div class="section-header">
-                    <h2>Portfólio Musical</h2>
-                    <span class="badge-secure">🎵 Canais Oficiais</span>
-                </div>
 
-                <div class="link-card">
-                    <p>Ouça meu trabalho nas plataformas abaixo:</p>
-                    <div class="btn-container">
-                        <a href="https://audiomack.com/ovinimaluco" target="_blank" rel="noopener noreferrer" class="btn-music">
-                            Ouvir no Audiomack ↗
-                        </a>
-                        <a href="https://on.soundcloud.com/Qscum2rJpWQlpoEhK5" target="_blank" rel="noopener noreferrer" class="btn-music">
-                            Ouvir no SoundCloud ↗
-                        </a>
-                    </div>
-                </div>
-            </section>
         </div>
 
         <div id="projetos" class="page-content">
@@ -475,6 +459,25 @@
                 <a href="https://itallo-casimiro.itch.io/dead-mans-jackpot" target="_blank" rel="noopener noreferrer" class="btn-music">
                     Ver Dead Man's Jackpot no itch.io ↗
                 </a>
+            </section>
+        </div>
+
+        <div id="plataformas" class="page-content">
+            <section class="bio-card">
+                <div class="section-title-wrapper">
+                    <h2>Minhas Plataformas</h2>
+                </div>
+                <div class="link-card">
+                    <p>Ouça meu trabalho e acompanhe minhas produções nas plataformas abaixo:</p>
+                    <div class="btn-container">
+                        <a href="https://audiomack.com/ovinimaluco" target="_blank" rel="noopener noreferrer" class="btn-music">
+                            Ouvir no Audiomack ↗
+                        </a>
+                        <a href="https://on.soundcloud.com/Qscum2rJpWQlpoEhK5" target="_blank" rel="noopener noreferrer" class="btn-music">
+                            Ouvir no SoundCloud ↗
+                        </a>
+                    </div>
+                </div>
             </section>
         </div>
 
