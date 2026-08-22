@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinícius Barbosa | Compositor & Produtor Musical</title>
-    <meta name="description" content="Portfólio musical de Vinícius Barbosa. Trilhas sonoras experimentais, clássicas, modernas e música brasileira para jogos, filmes e mais.">
+    <title>Vinícius Barbosa | Composer & Music Producer</title>
+    <meta name="description" content="Music portfolio of Vinícius Barbosa. Experimental, classical, modern sound tracks and Brazilian music for games, movies and more.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #f4f6f8;           /* Azul marinho bem escuro */
-            --card-bg: #ffffff;            /* Azul marinho pastel escuro */
-            --card-border: #d9e0e7;        /* Borda suave */
-            --accent-color: #5f7fa3;      /* Azul marinho pastel suave */
-            --accent-hover: #7696b8;      /* Tom suave para hover */
+            --bg-color: #f4f6f8;           /* Light slate gray */
+            --card-bg: #ffffff;            /* White card background */
+            --card-border: #d9e0e7;        /* Soft border */
+            --accent-color: #5f7fa3;      /* Muted navy blue */
+            --accent-hover: #7696b8;      /* Hover shade */
             --badge-bg: rgba(95, 127, 163, 0.10);
-            --text-primary: #26313d;       /* Branco azulado */
-            --text-secondary: #667384;     /* Cinza/azul fosco */
+            --text-primary: #26313d;       /* Dark text */
+            --text-secondary: #667384;     /* Muted secondary text */
             --max-width: 950px;
         }
 
@@ -45,6 +45,43 @@
             width: 100%;
             max-width: var(--max-width);
             margin: 0 auto;
+            position: relative;
+        }
+
+        /* Seletor de Idiomas */
+        .lang-switch-wrapper {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .lang-select-box {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: border-color 0.2s ease;
+        }
+
+        .lang-select-box:hover {
+            border-color: var(--accent-color);
+        }
+
+        .lang-select-box select {
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            cursor: pointer;
         }
 
         /* Barra de Navegação / Abas */
@@ -53,6 +90,7 @@
             justify-content: center;
             gap: 12px;
             margin-bottom: 20px;
+            flex-wrap: wrap;
         }
 
         .tab-btn {
@@ -90,7 +128,7 @@
         /* Cabeçalho / Hero */
         header {
             text-align: center;
-            padding: 30px 20px 30px;
+            padding: 20px 20px 30px;
             position: relative;
         }
 
@@ -125,14 +163,14 @@
             text-transform: uppercase;
         }
 
-        /* Seções e Cards Genericos */
+        /* Seções e Cards Genéricos */
         .bio-card {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 16px;
             padding: 28px 24px;
             margin: 30px 0;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: transform 0.2s ease, border-color 0.2s ease;
         }
 
@@ -185,7 +223,7 @@
             border: 1px solid var(--card-border);
             border-radius: 16px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease, border-color 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -221,40 +259,14 @@
             line-height: 1.6;
         }
 
-        /* Seção de Portfólio Musical */
-        .music-section {
-            margin: 50px 0 30px;
-        }
-
-        .section-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 20px;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .badge-secure {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: var(--badge-bg);
-            color: var(--accent-color);
-            border: 1px solid rgba(114, 155, 202, 0.25);
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-
+        /* Seção de Links */
         .link-card {
             background-color: var(--card-bg);
             border: 1px solid var(--card-border);
             border-radius: 16px;
             padding: 30px 24px;
             text-align: center;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
         }
 
         .link-card p {
@@ -276,7 +288,7 @@
             gap: 10px;
             width: 100%;
             background-color: var(--accent-color);
-            color: #0b131f;
+            color: #ffffff;
             font-weight: 700;
             font-size: 1.1rem;
             padding: 16px 20px;
@@ -298,7 +310,7 @@
             overflow: hidden;
             border: 1px solid var(--card-border);
             background-color: var(--card-bg);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             margin-top: 20px;
         }
 
@@ -329,7 +341,7 @@
             }
 
             header {
-                padding: 20px 10px 20px;
+                padding: 10px 10px 20px;
             }
 
             .bio-card, .link-card {
@@ -350,87 +362,101 @@
 
     <div class="container">
         
+        <!-- Botão Seletor de Idioma -->
+        <div class="lang-switch-wrapper">
+            <div class="lang-select-box">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="2" y1="12" x2="22" y2="12"></line>
+                    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+                <select id="langSelect" onchange="changeLanguage(this.value)">
+                    <option value="en" selected>English</option>
+                    <option value="pt">Português</option>
+                    <option value="es">Español</option>
+                </select>
+            </div>
+        </div>
+
         <nav class="nav-tabs">
-            <button class="tab-btn active" onclick="switchTab('inicio')">Início</button>
-            <button class="tab-btn" onclick="switchTab('projetos')">Projetos que participei</button>
-            <button class="tab-btn" onclick="switchTab('plataformas')">Minhas plataformas</button>
+            <button class="tab-btn active" onclick="switchTab(event, 'inicio')" data-i18n="nav_home">Home</button>
+            <button class="tab-btn" onclick="switchTab(event, 'projetos')" data-i18n="nav_projects">Projects I've Joined</button>
+            <button class="tab-btn" onclick="switchTab(event, 'plataformas')" data-i18n="nav_platforms">My Platforms</button>
         </nav>
 
         <header>
             <div class="avatar-placeholder">VB</div>
             <h1>Vinícius Barbosa</h1>
-            <p class="subtitle">Compositor & Produtor Musical</p>
+            <p class="subtitle" data-i18n="subtitle">Composer & Music Producer</p>
         </header>
 
         <div id="inicio" class="page-content active">
             <section class="bio-card">
                 <div class="section-title-wrapper">
-                    <h2>Sobre o Artista</h2>
+                    <h2 data-i18n="about_title">About the Artist</h2>
                 </div>
-                <p>
-                    Compositor e produtor musical especializado em trilhas sonoras experimentais, clássicas, modernas e ritmos brasileiros. 
-                    Crio músicas para diferentes estilos e projetos, sempre buscando construir uma identidade sonora única. 
-                    Abaixo você confere minhas áreas de atuação e meus trabalhos mais recentes.
+                <p data-i18n="about_text">
+                    Composer and music producer specializing in experimental, classical, modern soundtracks, and Brazilian rhythms. 
+                    I create music for various styles and projects, always striving to build a unique sonic identity. 
+                    Below you can explore my areas of expertise and recent works.
                 </p>
             </section>
 
             <section class="skills-section">
                 <div class="section-title-wrapper">
-                    <h2>Especialidades & Habilidades</h2>
+                    <h2 data-i18n="skills_title">Specialties & Skills</h2>
                 </div>
 
                 <div class="skills-grid">
                     <div class="skill-card">
-                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=600&q=80" alt="Música Brasileira">
+                        <img src="https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=600&q=80" alt="Brazilian Music">
                         <div class="skill-content">
-                            <h3>Música Brasileira</h3>
-                            <p>Composição e arranjos inspirados na riqueza dos ritmos e gêneros musicais nacionais, unindo tradição e modernidade.</p>
+                            <h3 data-i18n="skill_1_title">Brazilian Music</h3>
+                            <p data-i18n="skill_1_desc">Composition and arrangements inspired by the richness of national musical rhythms, combining tradition and modernity.</p>
                         </div>
                     </div>
 
                     <div class="skill-card">
-                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="Trilhas Sonoras para Jogos">
+                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=600&q=80" alt="Game Soundtracks">
                         <div class="skill-content">
-                            <h3>Trilhas Sonoras para Jogos</h3>
-                            <p>Música dinâmica para menus, exploração, combate, suspense, romance e cenas cinematográficas.</p>
+                            <h3 data-i18n="skill_2_title">Game Soundtracks</h3>
+                            <p data-i18n="skill_2_desc">Dynamic music for menus, exploration, combat, suspense, romance, and cinematic cutscenes.</p>
                         </div>
                     </div>
 
                     <div class="skill-card">
-                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80" alt="Trilhas para Filmes e Curtas">
+                        <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=600&q=80" alt="Film & Short Film Scores">
                         <div class="skill-content">
-                            <h3>Trilhas para Filmes e Curtas</h3>
-                            <p>Composição voltada para reforçar emoções e acompanhar a narrativa visual.</p>
+                            <h3 data-i18n="skill_3_title">Film & Short Scores</h3>
+                            <p data-i18n="skill_3_desc">Composition aimed at enhancing emotions and supporting visual storytelling.</p>
                         </div>
                     </div>
 
                     <div class="skill-card">
                         <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=600&q=80" alt="Ambient Music">
                         <div class="skill-content">
-                            <h3>Ambient Music</h3>
-                            <p>Faixas imersivas para ambientes, meditação, exploração e experiências interativas.</p>
+                            <h3 data-i18n="skill_4_title">Ambient Music</h3>
+                            <p data-i18n="skill_4_desc">Immersive tracks for environments, meditation, exploration, and interactive experiences.</p>
                         </div>
                     </div>
 
                     <div class="skill-card">
-                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80" alt="Produção Musical">
+                        <img src="https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=600&q=80" alt="Music Production">
                         <div class="skill-content">
-                            <h3>Produção Musical</h3>
-                            <p>Arranjo, gravação, mixagem e finalização completa de composições.</p>
+                            <h3 data-i18n="skill_5_title">Music Production</h3>
+                            <p data-i18n="skill_5_desc">Arrangement, recording, mixing, and complete mastering of compositions.</p>
                         </div>
                     </div>
 
                     <div class="skill-card">
-                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" alt="Design Sonoro">
+                        <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=600&q=80" alt="Sound Design">
                         <div class="skill-content">
-                            <h3>Design Sonoro</h3>
-                            <p>Criação de atmosferas e elementos sonoros únicos que complementam a trilha musical.</p>
+                            <h3 data-i18n="skill_6_title">Sound Design</h3>
+                            <p data-i18n="skill_6_desc">Creation of unique atmospheres and sound elements that complement the musical soundtrack.</p>
                         </div>
                     </div>
                 </div>
             </section>
-
-
         </div>
 
         <div id="projetos" class="page-content">
@@ -438,8 +464,8 @@
                 <div class="section-title-wrapper">
                     <h2>ResoPuzzle</h2>
                 </div>
-                <p style="margin-bottom: 20px;">
-                    Confira abaixo um dos jogos e projetos que contaram com a minha participação e composição sonora:
+                <p style="margin-bottom: 20px;" data-i18n="project_reso_desc">
+                    Check out below one of the games and projects featuring my sound composition and participation:
                 </p>
                 <div class="project-frame-wrapper">
                     <iframe src="https://tornzyy.github.io/resopuzzle/" title="ResoPuzzle"></iframe>
@@ -450,14 +476,14 @@
                 <div class="section-title-wrapper">
                     <h2>Dead Man's Jackpot</h2>
                 </div>
-                <p style="margin-bottom: 10px;">
-                    Jogo desenvolvido por <strong>Itallo Casimiro</strong>, da <strong>Game Chip's Studios</strong>, no qual participei como compositor.
+                <p style="margin-bottom: 10px;" data-i18n="project_dead_p1">
+                    Game developed by <strong>Itallo Casimiro</strong> from <strong>Game Chip's Studios</strong>, in which I participated as a composer.
                 </p>
-                <p style="margin-bottom: 20px;">
-                    Um roguelike com temática de cassino e Velho Oeste, baseado em cartas e rolagens de dados.
+                <p style="margin-bottom: 20px;" data-i18n="project_dead_p2">
+                    A casino and Wild West themed roguelike based on cards and dice rolls.
                 </p>
-                <a href="https://itallo-casimiro.itch.io/dead-mans-jackpot" target="_blank" rel="noopener noreferrer" class="btn-music">
-                    Ver Dead Man's Jackpot no itch.io ↗
+                <a href="https://itallo-casimiro.itch.io/dead-mans-jackpot" target="_blank" rel="noopener noreferrer" class="btn-music" data-i18n="project_dead_btn">
+                    View Dead Man's Jackpot on itch.io ↗
                 </a>
             </section>
         </div>
@@ -465,16 +491,16 @@
         <div id="plataformas" class="page-content">
             <section class="bio-card">
                 <div class="section-title-wrapper">
-                    <h2>Minhas Plataformas</h2>
+                    <h2 data-i18n="platforms_title">My Platforms</h2>
                 </div>
                 <div class="link-card">
-                    <p>Ouça meu trabalho e acompanhe minhas produções nas plataformas abaixo:</p>
+                    <p data-i18n="platforms_desc">Listen to my work and follow my productions on the platforms below:</p>
                     <div class="btn-container">
-                        <a href="https://audiomack.com/ovinimaluco" target="_blank" rel="noopener noreferrer" class="btn-music">
-                            Ouvir no Audiomack ↗
+                        <a href="https://audiomack.com/ovinimaluco" target="_blank" rel="noopener noreferrer" class="btn-music" data-i18n="btn_audiomack">
+                            Listen on Audiomack ↗
                         </a>
-                        <a href="https://on.soundcloud.com/Qscum2rJpWQlpoEhK5" target="_blank" rel="noopener noreferrer" class="btn-music">
-                            Ouvir no SoundCloud ↗
+                        <a href="https://on.soundcloud.com/Qscum2rJpWQlpoEhK5" target="_blank" rel="noopener noreferrer" class="btn-music" data-i18n="btn_soundcloud">
+                            Listen on SoundCloud ↗
                         </a>
                     </div>
                 </div>
@@ -484,22 +510,125 @@
     </div>
 
     <footer>
-        <p>&copy; 2026 <span>Vinícius Barbosa</span>. Todos os direitos reservados.</p>
+        <p>&copy; 2026 <span>Vinícius Barbosa</span>. <span data-i18n="footer_rights">All rights reserved.</span></p>
     </footer>
 
     <script>
-        function switchTab(tabId) {
-            // Oculta todas as páginas
+        // Dicionário de traduções
+        const translations = {
+            en: {
+                nav_home: "Home",
+                nav_projects: "Projects I've Joined",
+                nav_platforms: "My Platforms",
+                subtitle: "Composer & Music Producer",
+                about_title: "About the Artist",
+                about_text: "Composer and music producer specializing in experimental, classical, modern soundtracks, and Brazilian rhythms. I create music for various styles and projects, always striving to build a unique sonic identity. Below you can explore my areas of expertise and recent works.",
+                skills_title: "Specialties & Skills",
+                skill_1_title: "Brazilian Music",
+                skill_1_desc: "Composition and arrangements inspired by the richness of national musical rhythms, combining tradition and modernity.",
+                skill_2_title: "Game Soundtracks",
+                skill_2_desc: "Dynamic music for menus, exploration, combat, suspense, romance, and cinematic cutscenes.",
+                skill_3_title: "Film & Short Scores",
+                skill_3_desc: "Composition aimed at enhancing emotions and supporting visual storytelling.",
+                skill_4_title: "Ambient Music",
+                skill_4_desc: "Immersive tracks for environments, meditation, exploration, and interactive experiences.",
+                skill_5_title: "Music Production",
+                skill_5_desc: "Arrangement, recording, mixing, and complete mastering of compositions.",
+                skill_6_title: "Sound Design",
+                skill_6_desc: "Creation of unique atmospheres and sound elements that complement the musical soundtrack.",
+                project_reso_desc: "Check out below one of the games and projects featuring my sound composition and participation:",
+                project_dead_p1: "Game developed by <strong>Itallo Casimiro</strong> from <strong>Game Chip's Studios</strong>, in which I participated as a composer.",
+                project_dead_p2: "A casino and Wild West themed roguelike based on cards and dice rolls.",
+                project_dead_btn: "View Dead Man's Jackpot on itch.io ↗",
+                platforms_title: "My Platforms",
+                platforms_desc: "Listen to my work and follow my productions on the platforms below:",
+                btn_audiomack: "Listen on Audiomack ↗",
+                btn_soundcloud: "Listen on SoundCloud ↗",
+                footer_rights: "All rights reserved."
+            },
+            pt: {
+                nav_home: "Início",
+                nav_projects: "Projetos que participei",
+                nav_platforms: "Minhas plataformas",
+                subtitle: "Compositor & Produtor Musical",
+                about_title: "Sobre o Artista",
+                about_text: "Compositor e produtor musical especializado em trilhas sonoras experimentais, clássicas, modernas e ritmos brasileiros. Crio músicas para diferentes estilos e projetos, sempre buscando construir uma identidade sonora única. Abaixo você confere minhas áreas de atuação e meus trabalhos mais recentes.",
+                skills_title: "Especialidades & Habilidades",
+                skill_1_title: "Música Brasileira",
+                skill_1_desc: "Composição e arranjos inspirados na riqueza dos ritmos e gêneros musicais nacionais, unindo tradição e modernidade.",
+                skill_2_title: "Trilhas Sonoras para Jogos",
+                skill_2_desc: "Música dinâmica para menus, exploração, combate, suspense, romance e cenas cinematográficas.",
+                skill_3_title: "Trilhas para Filmes e Curtas",
+                skill_3_desc: "Composição voltada para reforçar emoções e acompanhar a narrativa visual.",
+                skill_4_title: "Ambient Music",
+                skill_4_desc: "Faixas imersivas para ambientes, meditação, exploração e experiências interativas.",
+                skill_5_title: "Produção Musical",
+                skill_5_desc: "Arranjo, gravação, mixagem e finalização completa de composições.",
+                skill_6_title: "Design Sonoro",
+                skill_6_desc: "Criação de atmosferas e elementos sonoros únicos que complementam a trilha musical.",
+                project_reso_desc: "Confira abaixo um dos jogos e projetos que contaram com a minha participação e composição sonora:",
+                project_dead_p1: "Jogo desenvolvido por <strong>Itallo Casimiro</strong>, da <strong>Game Chip's Studios</strong>, no qual participei como compositor.",
+                project_dead_p2: "Um roguelike com temática de cassino e Velho Oeste, baseado em cartas e rolagens de dados.",
+                project_dead_btn: "Ver Dead Man's Jackpot no itch.io ↗",
+                platforms_title: "Minhas Plataformas",
+                platforms_desc: "Ouça meu trabalho e acompanhe minhas produções nas plataformas abaixo:",
+                btn_audiomack: "Ouvir no Audiomack ↗",
+                btn_soundcloud: "Ouvir no SoundCloud ↗",
+                footer_rights: "Todos os direitos reservados."
+            },
+            es: {
+                nav_home: "Inicio",
+                nav_projects: "Proyectos en los que participé",
+                nav_platforms: "Mis plataformas",
+                subtitle: "Compositor y Productor Musical",
+                about_title: "Sobre el Artista",
+                about_text: "Compositor y productor musical especializado en bandas sonoras experimentales, clásicas, modernas y ritmos brasileños. Creo música para diferentes estilos y proyectos, buscando siempre construir una identidad sonora única. A continuación puedes ver mis áreas de especialización y mis trabajos más recientes.",
+                skills_title: "Especialidades y Habilidades",
+                skill_1_title: "Música Brasileña",
+                skill_1_desc: "Composición y arreglos inspirados en la riqueza de los ritmos musicales nacionales, uniendo tradición y modernidad.",
+                skill_2_title: "Banda Sonora para Juegos",
+                skill_2_desc: "Música dinámica para menúes, exploración, combate, suspenso, romance y escenas cinematográficas.",
+                skill_3_title: "Música para Películas y Cortos",
+                skill_3_desc: "Composición orientada a reforzar emociones y acompañar la narrativa visual.",
+                skill_4_title: "Música Ambiental",
+                skill_4_desc: "Pistas envolventes para ambientes, meditación, exploración y experiencias interactivas.",
+                skill_5_title: "Producción Musical",
+                skill_5_desc: "Arreglo, grabación, mezcla y finalización completa de composiciones.",
+                skill_6_title: "Diseño de Sonido",
+                skill_6_desc: "Creación de atmósferas y elementos sonoros únicos que complementan la banda sonora musical.",
+                project_reso_desc: "Echa un vistazo a continuación a uno de los juegos y proyectos en los que conté con mi participación y composición sonora:",
+                project_dead_p1: "Juego desarrollado por <strong>Itallo Casimiro</strong>, de <strong>Game Chip's Studios</strong>, en el cual participé como compositor.",
+                project_dead_p2: "Un roguelike con temática de casino y el Viejo Oeste, basado en cartas y tiradas de dados.",
+                project_dead_btn: "Ver Dead Man's Jackpot en itch.io ↗",
+                platforms_title: "Mis Plataformas",
+                platforms_desc: "Escucha mi trabajo y sigue mis producciones en las siguientes plataformas:",
+                btn_audiomack: "Escuchar en Audiomack ↗",
+                btn_soundcloud: "Escuchar en SoundCloud ↗",
+                footer_rights: "Todos los derechos reservados."
+            }
+        };
+
+        function switchTab(evt, tabId) {
             const pages = document.querySelectorAll('.page-content');
             pages.forEach(page => page.classList.remove('active'));
 
-            // Remove classe ativa dos botões
             const buttons = document.querySelectorAll('.tab-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
 
-            // Mostra a página selecionada e ativa o botão correspondente
             document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
+            evt.currentTarget.classList.add('active');
+        }
+
+        function changeLanguage(lang) {
+            document.documentElement.lang = lang;
+            const elements = document.querySelectorAll('[data-i18n]');
+            
+            elements.forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (translations[lang] && translations[lang][key]) {
+                    element.innerHTML = translations[lang][key];
+                }
+            });
         }
     </script>
 
